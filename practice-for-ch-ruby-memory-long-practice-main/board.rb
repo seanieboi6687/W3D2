@@ -33,7 +33,7 @@ class Board
 
     def populate
         flattened = @board.flatten
-        until flattened.all? {|ele| ele != []}
+        until flattened.all? {|ele| ele != []} do
             @cards.each do |card|
                 idx1 = rand(0..@size - 1)
                 idx2 = rand(0..@size - 1)
