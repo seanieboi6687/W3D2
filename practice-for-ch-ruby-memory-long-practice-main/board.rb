@@ -18,7 +18,17 @@ class Board
             end
         end
         @cards.shuffle!
-    end 
+    end
+    
+    def [](position)
+        row, col = position
+        @board[row][col]
+    end
+
+    def []=(position, value)
+        row, col = position
+        @board[row][col] = value
+    end
 
     def populate
 
