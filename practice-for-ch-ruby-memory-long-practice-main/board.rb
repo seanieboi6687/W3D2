@@ -50,7 +50,4 @@ class Board
         return true
     end
 
-    def reveal
-
-    end
 end
