@@ -39,7 +39,15 @@ class Board
     end
 
     def won?
+        @board.each do |row|
+            row.each do |card|
+                if card.hidden?
+                    return false
+                end
+            end
+        end
 
+        return true
     end
 
     def reveal
