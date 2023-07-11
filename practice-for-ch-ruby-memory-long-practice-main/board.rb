@@ -31,10 +31,24 @@ class Board
     end
 
     def populate
+        flattened = @board.flatten
+        until flattened.all? {|ele| ele != nil}
+            @cards.each do |card|
+                idx1 = rand(0..3)
+                idx2 = rand(0..3)
+                if @board[idx1][idx2] != nil
+                    @board[idx1][idx2] = card
+                end
+            end
+        end
 
     end
 
     def render
+
+    end
+    
+    def reveal(guessed_pos)
 
     end
 

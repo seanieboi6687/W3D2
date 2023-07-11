@@ -38,7 +38,7 @@ Small (from Memory Puzzle) reading in the sidebar.
 ## Board
 
 The `Board` is responsible for keeping track of all your `Card`s. You'll want a
-grid instance variable to contain `Card`s. Useful methods:
+board instance variable to contain `Card`s. Useful methods:
 
 - `#populate` should fill the board with a set of shuffled `Card` pairs
 - `#render` should print out a representation of the `Board`'s current state
