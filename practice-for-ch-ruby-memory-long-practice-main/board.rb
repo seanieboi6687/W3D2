@@ -5,7 +5,7 @@ class Board
     def initialize
         @letters = ("A".."H").to_a
         @cards = []
-        @board = Array.new(4) {Array.new}
+        @board = Array.new(4) {Array.new(4, [])}
         @size = 16 
         @letters.each do |char|
             @cards << Card.new(char)
@@ -37,7 +37,7 @@ class Board
                 idx1 = rand(0..3)
                 idx2 = rand(0..3)
                 if @board[idx1][idx2] != nil
-                    @board[idx1][idx2] = card
+                    @board[idx1][idx2] << card
                 end
             end
         end
